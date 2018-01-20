@@ -1,0 +1,35 @@
+#Server port
+server:
+    port: 8888
+
+# spring cloud config repo settings.
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: C:\\Users\\bzhang.HIC\\git-repo\\development\\config-repo # default repo
+          repos:
+            development:
+              pattern: 
+                - '*/development'
+                - '*/qa'
+              uri: C:\\Users\\bzhang.HIC\\git-repo\\development\\config-repo
+            staging:
+              pattern: 
+                - '*/staging'
+              uri: C:\\Users\\bzhang.HIC\\git-repo\\staging\\config-repo
+            production:
+              pattern: 
+                - '*/production'
+              uri: C:\\Users\\bzhang.HIC\\git-repo\\production\\config-repo
+            local:
+              pattern:
+                - '*/local'
+              uri: C:\\Users\\bzhang.HIC\\git-repo\\development\\config-repo
+
+
+#Disable security of the Management endpoint
+management:
+  security:
+     enabled: false

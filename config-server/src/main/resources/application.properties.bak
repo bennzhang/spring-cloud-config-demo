@@ -1,0 +1,22 @@
+#Server port
+server.port = 8888
+
+# spring cloud config repo setting.
+#Git repo location
+spring.cloud.config.server.git.uri=C:\\Users\\bzhang.HIC\\git-repo\\spring-cloud-config-repo
+#spring.cloud.config.server.git.force-pull=true
+#spring.cloud.config.server.git.username=true
+#spring.cloud.config.server.git.password=true
+
+spring.cloud.config.server.git.rep
+
+# subversion
+#spring.cloud.config.server.svn.uri=
+#spring.cloud.config.server.svn.username=
+#spring.cloud.config.server.svn.password=
+
+# spring cloud bus
+spring.cloud.config.server.monitor.github.enables=true
+
+#Disable security of the Management endpoint
+management.security.enabled=false

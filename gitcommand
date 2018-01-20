@@ -1,0 +1,5 @@
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/bennzhang/spring-cloud-config-demo.git
+git push -u origin master
