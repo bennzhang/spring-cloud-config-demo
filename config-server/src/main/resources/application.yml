@@ -8,25 +8,25 @@ spring:
     config:
       server:
         git:
-          uri: C:\\Users\\bzhang.HIC\\git-repo\\development\\config-repo # default repo
+          uri: C:\\Users\\bzhang\\git-repo\\development\\config-repo # default repo
           repos:
             development:
               pattern: 
                 - '*/development'
                 - '*/qa'
-              uri: C:\\Users\\bzhang.HIC\\git-repo\\development\\config-repo
+              uri: C:\\Users\\bzhang\\git-repo\\development\\config-repo
             staging:
               pattern: 
                 - '*/staging'
-              uri: C:\\Users\\bzhang.HIC\\git-repo\\staging\\config-repo
+              uri: C:\\Users\\bzhang\\git-repo\\staging\\config-repo
             production:
               pattern: 
                 - '*/production'
-              uri: C:\\Users\\bzhang.HIC\\git-repo\\production\\config-repo
+              uri: C:\\Users\\bzhang\\git-repo\\production\\config-repo
             local:
               pattern:
                 - '*/local'
-              uri: C:\\Users\\bzhang.HIC\\git-repo\\development\\config-repo
+              uri: C:\\Users\\bzhang\\git-repo\\development\\config-repo
 
 
 #Disable security of the Management endpoint
