@@ -231,9 +231,38 @@ java -jar config-client-demo.jar --spring.application.profiles=production
 
 
 
-# 4 Auto Refresh Config
+## 3.3 Actuator Enable Refresh Config 
 
- From above, you need to trigger `/refresh` endpoint manually to reload the config changes. This is not practical and viable if you have large number of applications. `Spring Cloud Bus` module can be used to implement auto refresh configs.  It links multiple applications with a message broker and broadcast configuration changes.
+### 3.3.1 Add Actuator dependency
+
+```
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+```
+
+### 3.3.2 Add @RefreshScope Annotation
+```
+@RestController
+@RefreshScope
+public class MessageController {
+    @Value("${example.message}")
+    private String msg;
+
+    @RequestMapping("/message")
+    String getMsg() {
+        return this.msg;
+    }
+}
+```
+
+When configations change on the config-server, you can trigger `/refresh` endpoint manually to reload the config changes.
+
+
+ # 4 Auto Refresh Config
+
+ From above, you need to trigger `/refresh` endpoint manually to reload the config changes. This is not practical and viable if you have large number of applications. `Spring Cloud Bus` module can be used to implement auto refresh configs. It links multiple applications with a message broker and broadcast configuration changes.
 
  (Continue .. )
 
